@@ -17,15 +17,15 @@ ENV PATH $PATH:$JAVA_HOME/bin
 
 # 安装 tomcat8
 #RUN apt-get update
-RUN wget http://mirrors.hust.edu.cn/apache/tomcat/tomcat-8/v8.5.14/bin/apache-tomcat-8.5.14.tar.gz
-RUN tar xvf apache-tomcat-8.5.13.tar.gz
+RUN wget http://mirrors.hust.edu.cn/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz
+RUN tar xvf apache-tomcat-8.5.35.tar.gz
 
 # 配置tomcat的环境变量
-ENV CATALINA_HOME /home/apache-tomcat-8.5.13
+ENV CATALINA_HOME /home/apache-tomcat-8.5.35
 
 # 容器需要开放Tomcat 8080端口
 EXPOSE 8080
 
 #设置tomcat 自启动
-CMD [ "/home/apache-tomcat-8.5.13/bin/catalina.sh", "run" ]
+CMD [ "/home/apache-tomcat-8.5.35/bin/catalina.sh", "run" ]
 #===================Dockerfile end=============
