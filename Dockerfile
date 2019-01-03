@@ -6,8 +6,8 @@ RUN apt-get update && apt-get install -y wget
 # 设置工作目录
 WORKDIR /home
 # 安装jdk
-RUN wget --no-cookies --no-check-certificate --header "Cookie:gpw_e24=http%3a%2f%2fwww.oracle.com%2ftechnetwork%2fjava%2fjavase%2fdownloads%2fjdk7-downloads-1880260.html;oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.tar.gz
-RUN tar -zxf jdk-7u79-linux-x64.tar.gz
+RUN wget --no-cookies --no-check-certificate --header "Cookie:gpw_e24=http%3a%2f%2fwww.oracle.com%2ftechnetwork%2fjava%2fjavase%2fdownloads%2fjdk7-downloads-1880260.html;oraclelicense=accept-securebackup-cookie" https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+RUN tar -zxf jdk-8u191-linux-x64.tar.gz
 
 # 配置环境变量
 ENV JAVA_HOME /home/jdk1.7.0_79
